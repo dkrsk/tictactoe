@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="tictactoe.GUI.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:tictactoe.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="480">
+    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,64,0,0">
+        <StackPanel.Resources>
+            
+        </StackPanel.Resources>
+        <TextBlock x:Name="lblIpa" TextWrapping="Wrap" Text="IP adress:" Height="32" FontSize="30" Foreground="#FF5B6EE1" FontFamily="C&amp;C Red Alert [INET]"/>
+        <TextBox Style="{DynamicResource TextBoxStyle1}" x:Name="txbIPa" TextWrapping="Wrap" Text="127.0.0.1" Width="256" Height="32" FontSize="24" Margin="0,1,0,0" KeyUp="txbPort_KeyUp" PreviewTextInput="txbIP_PreviewTextInput" MaxLength = "15" FontFamily="C&amp;C Red Alert [INET]" Foreground="#FFD77BBA" />
+        <Button x:Name="btnConnect" Margin="128,36,0,0" Height="34" Width="130" Click="btnConnect_Click" Style="{DynamicResource GameBtnStyle}">
+            <Grid Width="128" Height="32">
+                <Image Source="/resources/btnBlue.png" Stretch="Fill" Height="32" Width="128" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="CONNECT" FontFamily="C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
+            </Grid>
+        </Button>
+
+        <Grid Width="256" Height="100" Margin="0,80,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Remote port:" FontSize="20" Grid.Row="0" Foreground="#FF5B6EE1" FontFamily="C&amp;C Red Alert [INET]"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}" x:Name="txbRPort" TextWrapping="Wrap" Width="120" Margin="0,5,0,0" Text="25566" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Grid.Row="0" KeyUp="txbPort_KeyUp" PreviewTextInput="txbPort_PreviewTextInput" MaxLength = "5" FontFamily="C&amp;C Red Alert [INET]" FontSize="20" Foreground="#FFD77BBA"/>
+            <Label Content="Local port:" FontSize="20" Grid.Row="1" Foreground="#FF5B6EE1" FontFamily="C&amp;C Red Alert [INET]"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}" x:Name="txbLPort" TextWrapping="Wrap" Width="120" Margin="0,5,0,0" Text="25566" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Grid.Row="1" KeyUp="txbPort_KeyUp" PreviewTextInput="txbPort_PreviewTextInput" MaxLength = "5" FontFamily="C&amp;C Red Alert [INET]" FontSize="20" Foreground="#FFD77BBA"/>
+        </Grid>
+
+
+
+    </StackPanel>
+</UserControl>

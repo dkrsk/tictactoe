@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="tictactoe.GUI.GameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:tictactoe.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="480" Loaded="UserControl_Loaded">
+    <StackPanel>
+        <Label x:Name="lblInfo" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Your turn!" FontSize="48" Margin="0,8,0,0" Width="360" Height="86" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="C&amp;C Red Alert [INET]" Foreground="#FF5B6EE1"/>
+        <Grid x:Name="GameForm" Width="450" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resources/grid.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnLT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="0">
+                <Image />
+            </Button>
+            <Button x:Name="btnMT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="1" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="1">
+                <Image />
+            </Button>
+            <Button x:Name="btnRT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="2" Grid.Column="2"/>
+            <Button x:Name="btnLM" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="3" Grid.Row="1"/>
+            <Button x:Name="btnMM" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="1" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="4" Grid.Row="1"/>
+            <Button x:Name="btnRM" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="5" Grid.Row="1" Grid.Column="2"/>
+            <Button x:Name="btnLB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="6" Grid.Row="2"/>
+            <Button x:Name="btnMB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="1" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="7" Grid.Row="2"/>
+            <Button x:Name="btnRB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="2" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="8" Grid.Row="2"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnRevenge" Margin="0,6,0,0" Height="34" Width="130" Click="btnRevenge_Click" Style="{DynamicResource GameBtnStyle}" Visibility="Hidden" Grid.Column="0">
+                <Grid Width="128" Height="32">
+                    <Image Source="/resources/btnBlue.png" Stretch="Fill" Height="32" Width="128" />
+                    <Label Content="REVENGE" FontFamily="C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
+                </Grid>
+            </Button>
+            <Button x:Name="btnQuit" Margin="0,6,0,0" Height="34" Width="130" Click="btnQuit_Click" Style="{DynamicResource GameBtnStyle}" Grid.Column="1">
+                <Grid Width="128" Height="32">
+                    <Image Source="/resources/btnRed.png" Stretch="Fill" Height="32" Width="128" />
+                    <Label Content="QUIT" FontFamily="C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
+                </Grid>
+            </Button>
+        </Grid>
+    </StackPanel>
+</UserControl>

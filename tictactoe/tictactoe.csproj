@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\ttt.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\bkg.png" />
+    <None Remove="Resources\btn128-36.png" />
+    <None Remove="Resources\btnBlue.png" />
+    <None Remove="Resources\btnRed.png" />
+    <None Remove="Resources\grid.png" />
+    <None Remove="Resources\h1.png" />
+    <None Remove="Resources\h2.png" />
+    <None Remove="Resources\h3.png" />
+    <None Remove="Resources\h4.png" />
+    <None Remove="Resources\h5.png" />
+    <None Remove="Resources\redAlert.ttf" />
+    <None Remove="Resources\ttt.ico" />
+    <None Remove="Resources\txb.png" />
+    <None Remove="Resources\x1.png" />
+    <None Remove="Resources\x2.png" />
+    <None Remove="Resources\x3.png" />
+    <None Remove="Resources\x4.png" />
+    <None Remove="Resources\x5.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mono.Nat" Version="3.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\bkg.png" />
+    <Resource Include="Resources\btnBlue.png" />
+    <Resource Include="Resources\btnRed.png" />
+    <Resource Include="Resources\grid.png" />
+    <Resource Include="Resources\oImg\h1.png" />
+    <Resource Include="Resources\oImg\h2.png" />
+    <Resource Include="Resources\oImg\h3.png" />
+    <Resource Include="Resources\oImg\h4.png" />
+    <Resource Include="Resources\oImg\h5.png" />
+    <Resource Include="Resources\redAlert.ttf" />
+    <Resource Include="Resources\ttt.ico" />
+    <Resource Include="Resources\txb.png" />
+    <Resource Include="Resources\xImg\x1.png" />
+    <Resource Include="Resources\xImg\x2.png" />
+    <Resource Include="Resources\xImg\x3.png" />
+    <Resource Include="Resources\xImg\x4.png" />
+    <Resource Include="Resources\xImg\x5.png" />
+  </ItemGroup>
+
+</Project>
