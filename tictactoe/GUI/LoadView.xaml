@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="480">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="184" Margin="16,0,0,0">
-        <TextBlock x:Name="lblLoading" TextWrapping="Wrap" Text="Loading..." Height="64" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5B6EE1" FontFamily="C&amp;C Red Alert [INET]"/>
+        <TextBlock x:Name="lblLoading" TextWrapping="Wrap" Text="Loading..." Height="64" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5B6EE1" FontFamily="/resources/#C&amp;C Red Alert [INET]"/>
 
         <Button x:Name="btnConnect" Margin="-16,36,0,0" Height="34" Width="130" Click="btnConnect_Click" Style="{DynamicResource GameBtnStyle}">
             <Grid Width="128" Height="32">
                 <Image Source="/resources/btnBlue.png" Stretch="Fill" Height="32" Width="128" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Label Content="CANCEL" FontFamily="C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
+                <Label Content="CANCEL" FontFamily="/resources/#C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
             </Grid>
         </Button>
         

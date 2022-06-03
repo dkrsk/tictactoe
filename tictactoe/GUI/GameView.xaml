@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="480" Loaded="UserControl_Loaded">
     <StackPanel>
-        <Label x:Name="lblInfo" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Your turn!" FontSize="48" Margin="0,8,0,0" Width="360" Height="86" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="C&amp;C Red Alert [INET]" Foreground="#FF5B6EE1"/>
+        <Label x:Name="lblInfo" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Your turn!" FontSize="48" Margin="0,8,0,0" Width="360" Height="86" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/resources/#C&amp;C Red Alert [INET]" Foreground="#FF5B6EE1"/>
         <Grid x:Name="GameForm" Width="450" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
             <Grid.Background>
                 <ImageBrush ImageSource="/Resources/grid.png"/>
@@ -22,12 +22,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnLT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="0">
-                <Image />
-            </Button>
-            <Button x:Name="btnMT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="1" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="1">
-                <Image />
-            </Button>
+            <Button x:Name="btnLT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="0"/>
+            <Button x:Name="btnMT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="1" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="1"/>
             <Button x:Name="btnRT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="2" Grid.Column="2"/>
             <Button x:Name="btnLM" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="3" Grid.Row="1"/>
             <Button x:Name="btnMM" HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="128" Grid.Column="1" FontSize="72" FontFamily="Microsoft YaHei UI" Click="btnGame_Click" Style="{DynamicResource GameBtnStyle}" Tag="4" Grid.Row="1"/>
@@ -44,13 +40,13 @@
             <Button x:Name="btnRevenge" Margin="0,6,0,0" Height="34" Width="130" Click="btnRevenge_Click" Style="{DynamicResource GameBtnStyle}" Visibility="Hidden" Grid.Column="0">
                 <Grid Width="128" Height="32">
                     <Image Source="/resources/btnBlue.png" Stretch="Fill" Height="32" Width="128" />
-                    <Label Content="REVENGE" FontFamily="C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
+                    <Label Content="REVENGE" FontFamily="/resources/#C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
                 </Grid>
             </Button>
             <Button x:Name="btnQuit" Margin="0,6,0,0" Height="34" Width="130" Click="btnQuit_Click" Style="{DynamicResource GameBtnStyle}" Grid.Column="1">
                 <Grid Width="128" Height="32">
                     <Image Source="/resources/btnRed.png" Stretch="Fill" Height="32" Width="128" />
-                    <Label Content="QUIT" FontFamily="C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
+                    <Label Content="QUIT" FontFamily="/resources/#C&amp;C Red Alert [INET]" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-3,0,0" FontWeight="Bold"/>
                 </Grid>
             </Button>
         </Grid>
