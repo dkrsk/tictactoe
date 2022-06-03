@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Controls;
 using System.Diagnostics;
 
@@ -53,7 +53,14 @@ namespace tictactoe.GUI
         {
             Dispatcher.Invoke(() =>
             {
-                lblInfo.Content = $"{(game.player.GetType().Equals(player.GetType()) ? "You" : "Opponent")} won!";
+                if (player.GetType().Equals(new PlayerDraw().GetType()))
+                {
+                    lblInfo.Content = "Draw!";
+                }
+                else
+                {
+                    lblInfo.Content = $"{(game.player.GetType().Equals(player.GetType()) ? "You" : "Opponent")} won!";
+                }
             });
         }
 
@@ -61,7 +68,8 @@ namespace tictactoe.GUI
         {
             await game.netPeer.Send(NetCodes.Revenge);
             parent.netPeer.Close();
-            parent.StartView.Connect();
+            await parent.LoadViewAsync(parent.LoadingView);
+            await parent.StartView.Connect();
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
@@ -76,11 +84,11 @@ namespace tictactoe.GUI
             {
                 if (player.IsX)
                 {
-                    buttonsField[tag].Content = App.Current.FindResource(xImgKeys[rnd.Next(0, 4)]);
+                    buttonsField[tag].Background = App.Current.FindResource(xImgKeys[rnd.Next(0, 4)]) as ImageBrush;
                 }
                 else
                 {
-                    buttonsField[tag].Content = App.Current.FindResource(oImgKeys[rnd.Next(0, 4)]);
+                    buttonsField[tag].Background = App.Current.FindResource(oImgKeys[rnd.Next(0, 4)]) as ImageBrush;
                 }
             });
         }        

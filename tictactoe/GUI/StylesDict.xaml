@@ -2,16 +2,17 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Image Source="/resources/xImg/x1.png" x:Key="x1"/>
-    <Image Source="/resources/xImg/x2.png" x:Key="x2"/>
-    <Image Source="/resources/xImg/x3.png" x:Key="x3"/>
-    <Image Source="/resources/xImg/x4.png" x:Key="x4"/>
-    <Image Source="/resources/xImg/x5.png" x:Key="x5"/>
-    <Image Source="/resources/oImg/h1.png" x:Key="h1"/>
-    <Image Source="/resources/oImg/h2.png" x:Key="h2"/>
-    <Image Source="/resources/oImg/h3.png" x:Key="h3"/>
-    <Image Source="/resources/oImg/h4.png" x:Key="h4"/>
-    <Image Source="/resources/oImg/h5.png" x:Key="h5"/>
+    <ImageBrush ImageSource="/resources/xImg/x1.png" Stretch="Fill" x:Key="x1"/>
+    <ImageBrush ImageSource="/resources/xImg/x2.png" Stretch="Fill" x:Key="x2"/>
+    <ImageBrush ImageSource="/resources/xImg/x3.png" Stretch="Fill" x:Key="x3"/>
+    <ImageBrush ImageSource="/resources/xImg/x4.png" Stretch="Fill" x:Key="x4"/>
+    <ImageBrush ImageSource="/resources/xImg/x5.png" Stretch="Fill" x:Key="x5"/>
+
+    <ImageBrush ImageSource="/resources/oImg/h1.png" Stretch="Fill" x:Key="h1"/>
+    <ImageBrush ImageSource="/resources/oImg/h2.png" Stretch="Fill" x:Key="h2"/>
+    <ImageBrush ImageSource="/resources/oImg/h3.png" Stretch="Fill" x:Key="h3"/>
+    <ImageBrush ImageSource="/resources/oImg/h4.png" Stretch="Fill" x:Key="h4"/>
+    <ImageBrush ImageSource="/resources/oImg/h5.png" Stretch="Fill" x:Key="h5"/>
 
     <ImageBrush ImageSource="/resources/txb.png" Stretch="Fill" x:Key="txbImg"/>
     <ImageBrush ImageSource="/resources/bkg.png" Stretch="Fill" x:Key="bkgImg"/>
@@ -102,17 +103,17 @@
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                            <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
                             <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>-->
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

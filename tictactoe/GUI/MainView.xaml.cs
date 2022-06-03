@@ -27,7 +27,7 @@ namespace tictactoe.GUI
 
         private async void btnConnect_Click(object sender, RoutedEventArgs e)
         {
-            await Connect();
+            await Dispatcher.Invoke(async () => await Connect());
         }
 
         public async Task Connect()

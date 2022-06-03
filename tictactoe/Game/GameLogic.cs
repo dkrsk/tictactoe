@@ -33,8 +33,12 @@ namespace tictactoe.Game
 
         public delegate void EndGameHandler(Player player);
         public event EndGameHandler GameEnded;
+
         private bool isEnded = false;
         public bool IsEnded { get { return isEnded; } }
+
+        private bool isStarted = false;
+        public bool IsStarted { get { return isStarted; } }
 
 
         public GameLogic(NetPeer netPeer, MainWindow window)
@@ -122,6 +126,8 @@ namespace tictactoe.Game
 
         private void StartGame()
         {
+            isStarted = true;
+
             Window.LoadView(View);
 
             netPeer.MessageReceived += RemoteClick;
@@ -173,6 +179,17 @@ namespace tictactoe.Game
             if (gameField[2] != null && gameField[2] == gameField[4] && gameField[2] == gameField[6])
             {
                 return gameField[2] == 1 ? new PlayerX() : new PlayerO();
+            }
+            for (int i = 0; i <= 8; i++)
+            {
+                if (gameField[i] == null)
+                {
+                    break;
+                }
+                if (i == 8)
+                {
+                    return new PlayerDraw();
+                }
             }
             return null;
         }

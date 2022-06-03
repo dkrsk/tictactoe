@@ -7,10 +7,10 @@ namespace tictactoe.Game
         private readonly Char symb;
         private readonly int num;
 
-        public Player(Char symb)
+        protected Player(Char symb, int num)
         {
             this.symb = symb;
-            this.num = IsX ? 1 : 2;
+            this.num = num;
         }
 
         public char ToChar()
@@ -34,14 +34,21 @@ namespace tictactoe.Game
 
     public class PlayerX : Player
     {
-        public PlayerX() : base('X')
+        public PlayerX() : base('X', 1)
         {
         }
     }
 
     public class PlayerO : Player
     {
-        public PlayerO() : base('O')
+        public PlayerO() : base('O', 2)
+        {
+        }
+    }
+
+    public class PlayerDraw : Player
+    {
+        public PlayerDraw() : base('D', 3)
         {
         }
     }

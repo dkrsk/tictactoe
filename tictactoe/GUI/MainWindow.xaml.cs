@@ -97,12 +97,13 @@ namespace tictactoe.GUI
         }
         private void DisconnectedHandler(short message)
         {
-            if(message == NetCodes.Revenge)
+            if(message == NetCodes.Revenge && game != null && game.IsEnded)
             {
                 isRevageRequested = true;
+                netPeer.Close();
                 return;
             }
-            if (message == NetCodes.Disconnect && isRevageRequested == false)
+            if (message == NetCodes.Disconnect && isRevageRequested == false && game != null && game.IsStarted)
             {
                 netPeer.Close();
                 game.FinishTheGame(game.player);
